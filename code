@@ -1,9 +1,1 @@
-!pip install ultralytics
-from ultralytics import YOLO
-# Download example dataset (Kaggle)
-!pip install opendatasets
-import opendatasets as od
-od.download("https://www.kaggle.com/datasets/traffic-detection-project")
-model = YOLO("yolov8n.pt") 
-model.train(data="/content/traffic-detection-project/data.yaml", epochs=20)
-results = model.predict("/content/test_video.mp4", save=True)
+
